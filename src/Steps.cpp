@@ -22,9 +22,15 @@
 
 */
 #include "stdafx.h"
-
+//this problem leads to fibonaci series,so we can get answer using fibonaci series logic
+int fibonaci(int n)
+{
+	if (n <= 1)
+		return n;
+	return fibonaci(n - 1) + fibonaci(n - 2);
+}
 
 int get_steps(int s)
 {
-	return 0;
+	return fibonaci(s + 1);
 }
